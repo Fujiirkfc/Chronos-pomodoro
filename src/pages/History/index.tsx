@@ -86,8 +86,8 @@ export function History() {
             <DefaultButton
               icon={<TrashIcon />}
               color="red"
-              aria-label="Apagar todo o historico"
-              title="Apagar historico"
+              aria-label="Erase history"
+              title="Erase history"
               onClick={handleResetHistory}
             />
           </span>
@@ -143,7 +143,7 @@ export function History() {
             </table>
           </div>
         )}
-        {!hasTasks && <p>There is not created tasks yet</p>}
+        {!hasTasks && <p>There is non created tasks yet</p>}
       </Container>
     </MainTemplate>
   );

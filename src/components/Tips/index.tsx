@@ -7,19 +7,17 @@ export function Tips() {
   const nextCycle = getNextCycle(state.currentCycle);
   const nextCycleType = getNextCycleType(nextCycle);
   const tipsForWhenActiveTask = {
-    workTime: <span>Foque por {state.config.workTime} minutos</span>,
-    shortBreakTime: (
-      <span>Descanse por {state.config.shortBreakTime} minutos</span>
-    ),
+    workTime: <span>Focus for {state.config.workTime} minutes</span>,
+    shortBreakTime: <span>Rest for {state.config.shortBreakTime} minutes</span>,
     longBreakTime: <span>Descanso longo</span>,
   };
 
   const tipsForNoActiveTask = {
-    workTime: <span>Proximo ciclo e de {state.config.workTime} minutos</span>,
+    workTime: <span>Next cycle got {state.config.workTime} minutes</span>,
     shortBreakTime: (
-      <span>Proximo descanso e de {state.config.shortBreakTime} minutos</span>
+      <span>Next rest {state.config.shortBreakTime} minutes</span>
     ),
-    longBreakTime: <span>Proximo descanso sera longo</span>,
+    longBreakTime: <span>Next rest will be higher</span>,
   };
   return (
     <>

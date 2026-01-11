@@ -35,26 +35,18 @@ export function Menu() {
     });
   }
 
-  // useEffect(() => {
-  //   console.log('useEffect sem dependências', Date.now());
-  // }); // Executado todas vez que o componente renderiza na tela
-
-  // useEffect(() => {
-  //   console.log('useEffect com array deps vazio', Date.now());
-  // }, []); // Executa apenas quando o React monta o componente na tela pela primeira vez
-
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-  }, [theme]); // Executa apenas quando o valor de theme muda
+  }, [theme]);
 
   return (
     <nav className={styles.menu}>
       <RouterLink
         className={styles.menuLink}
         href="/"
-        aria-label="Ir para a Home"
-        title="Ir para a Home"
+        aria-label="Go to home"
+        title="Go to home"
       >
         <HouseIcon />
       </RouterLink>
@@ -62,8 +54,8 @@ export function Menu() {
       <RouterLink
         className={styles.menuLink}
         href="/history/"
-        aria-label="Ver Histórico"
-        title="Ver Histórico"
+        aria-label="Go to history"
+        title="Go to history"
       >
         <HistoryIcon />
       </RouterLink>
@@ -71,8 +63,8 @@ export function Menu() {
       <RouterLink
         className={styles.menuLink}
         href="/settings/"
-        aria-label="Configurações"
-        title="Configurações"
+        aria-label="Configurations"
+        title="Configurations"
       >
         <SettingsIcon />
       </RouterLink>
@@ -80,8 +72,8 @@ export function Menu() {
       <a
         className={styles.menuLink}
         href="#"
-        aria-label="Mudar Tema"
-        title="Mudar Tema"
+        aria-label="Change theme"
+        title="Change theme"
         onClick={handleThemeChange}
       >
         {nextThemeIcon[theme]}

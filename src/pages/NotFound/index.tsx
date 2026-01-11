@@ -13,27 +13,27 @@ export function NotFound() {
     <MainTemplate>
       <Container>
         <GenericHtml>
-          <Heading>404 - Página não encontrada 🚀</Heading>
+          <Heading>404 - Page not found 🚀</Heading>
           <p>
-            Opa! Parece que a página que você está tentando acessar não existe.
-            Talvez ela tenha tirado férias, resolvido explorar o universo ou se
-            perdido em algum lugar entre dois buracos negros. 🌌
+            Oops! It looks like the page you're trying to access doesn't exist.
+            Maybe it took a vacation, decided to explore the universe, or got
+            lost somewhere between two black holes. 🌌
           </p>
           <p>
-            Mas calma, você não está perdido no espaço (ainda). Dá pra voltar em
-            segurança para a <RouterLink href="/">página principal</RouterLink>
-            ou <RouterLink href="/history">para o histórico</RouterLink> — ou
-            pode ficar por aqui e fingir que achou uma página secreta que só os
-            exploradores mais legais conseguem acessar. 🧭✨
+            But don't worry, you're not lost in space (yet). You can safely go
+            back to the <RouterLink href="/">main page</RouterLink>
+            or <RouterLink href="/history">to the history</RouterLink> — or you
+            can stay here and pretend you found a secret page that only the
+            coolest explorers can access. 🧭✨
           </p>
           <p>
-            Se você acha que essa página deveria existir (ou se quiser bater um
-            papo sobre viagem no tempo e buracos de minhoca), é só entrar em
-            contato. Caso contrário, use o menu para voltar ao mundo real.
+            If you think this page should exist (or if you want to chat about
+            time travel and wormholes), just get in touch. Otherwise, use the
+            menu to return to the real world.
           </p>
           <p>
-            Enquanto isso, fica aqui uma reflexão: "Se uma página não existe na
-            internet, será que ela existiu de verdade?" 🤔💭
+            In the meantime, here's a thought: "If a page doesn't exist on the
+            internet, did it ever really exist?" 🤔💭
           </p>
         </GenericHtml>
       </Container>

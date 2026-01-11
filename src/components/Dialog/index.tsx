@@ -14,15 +14,15 @@ export function Dialog({ closeToast, data }: ToastContentProps<string>) {
           <DefaultButton
             onClick={() => closeToast(true)}
             icon={<ThumbsUpIcon />}
-            aria-label="Confirmar ação e fechar"
-            title="Confirmar ação e fechar"
+            aria-label="Confirm action and close"
+            title="Confirm action and close"
           />
           <DefaultButton
             onClick={() => closeToast(false)}
             icon={<ThumbsDownIcon />}
             color="red"
-            aria-label="Cancelar ação e fechar"
-            title="Cancelar ação e fechar"
+            aria-label="Cancel action and close"
+            title="Cancel action and close"
           />
         </div>
       </div>

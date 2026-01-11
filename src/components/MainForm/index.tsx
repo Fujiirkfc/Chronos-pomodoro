@@ -30,7 +30,7 @@ export function MainForm() {
     const taskName = taskNameInput.current.value.trim();
 
     if (!taskName) {
-      showMessage.warning("Digite o nome da tarefa");
+      showMessage.warning("Type the task name");
       return;
     }
 
@@ -45,7 +45,7 @@ export function MainForm() {
     };
 
     dispatch({ type: TaskActionTypes.START_TASK, payload: newTask });
-    showMessage.success("Tarefa iniciada!");
+    showMessage.success("Task started!");
   }
 
   function handleInterruptTask() {
@@ -60,7 +60,7 @@ export function MainForm() {
           labelText="task"
           id="meu_id"
           type="text"
-          placeholder="digite algo"
+          placeholder="type something"
           ref={taskNameInput}
           disabled={!!state.activeTask}
           defaultValue={lastTaskName}
@@ -79,16 +79,16 @@ export function MainForm() {
       <div className="formRow">
         {!state.activeTask ? (
           <DefaultButton
-            aria-label=" iniciar nova tarefa"
-            title="iniciar nova tarefa"
+            aria-label="start new task"
+            title="start new task"
             type="submit"
             icon={<PlayCircleIcon />}
             key="Submit button"
           />
         ) : (
           <DefaultButton
-            aria-label=" interromper tarefa"
-            title="interromper tarefa"
+            aria-label="cancel task"
+            title="cancel task"
             type="button"
             color="red"
             icon={<StopCircleIcon />}
