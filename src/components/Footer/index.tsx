@@ -5,10 +5,10 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <RouterLink href="/about-pomodoro">
-        Entenda como funciona a tecnica pomodoro
+        Understand how the Pomodoro technique works
       </RouterLink>
       <RouterLink href="/">
-        cronos pomodoro &copy; {new Date().getFullYear()} - feito com s2
+        Chronos pomodoro &copy; {new Date().getFullYear()} - made with s2
       </RouterLink>
     </footer>
   );
