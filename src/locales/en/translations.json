@@ -1,0 +1,111 @@
+{
+  "cycles": {
+    "title": "Cycles",
+    "indicator": "cycle indicator"
+  },
+  "dialog": {
+    "confirm": "Confirm action and close",
+    "cancel": "Cancel action and close"
+  },
+  "about": {
+    "title": "Understand how the Pomodoro technique works",
+    "slogan": "Made with s2"
+  },
+  "logo": {
+    "title": "Chronos"
+  },
+  "mainform": {
+    "title": "Task",
+    "warning": "Enter a task name to continue",
+    "success": "Task started!",
+    "placeholder": "type something",
+    "start": "Start new task",
+    "cancel": "Cancel task"
+  },
+  "menu": {
+    "home": "Home",
+    "history": "History",
+    "configurations": "Settings",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "tips": {
+    "workTimeFocus": "Focus for {{minutes}} minutes",
+    "shortBreakFocus": "Rest for {{minutes}} minutes",
+    "longBreakFocus": "Long rest",
+    "workTimeRest": "Next cycle lasts {{minutes}} minutes",
+    "shortTimeRest": "Next rest lasts {{minutes}} minutes",
+    "longTimeRest": "Next rest will be longer"
+  },
+  "aboutPomodoro": {
+    "title": "The Pomodoro Technique 🍅",
+    "description": "The Pomodoro Technique is a productivity methodology created by <1>Francesco Cirillo</1>, which consists of dividing work into time blocks (the famous 'Pomodoros') interspersed with breaks. The goal is to maintain total focus for a short period and ensure breaks to avoid mental fatigue.",
+    "how": "How does the traditional Pomodoro work?",
+    "howOne": "<0>1. Define a task</0> that you want to do.",
+    "howTwo": "<0>2. Work on that for 25 minutes</0> without interruptions.",
+    "howThree": "<0>3. Take a 5 minutes short rest</0>.",
+    "howFour": "<0>4. After every 4 cycles, take a long rest</0> (usually 15 to 30 minutes).",
+    "but": "But <1>Chronos Pomodoro</1> adds its own twist 🚀",
+    "butDescription": "Our app follows the original concept, but with some improvements and customizations to make the process even more efficient:",
+    "settings": "⚙️ Custom timer",
+    "settingsDescription": "You can configure the focus time, short break, and long break however you want! Just access the  <1>settings page</1> and adjust the minutes as you prefer.",
+    "details": "🔁 Organized cycles in sequence",
+    "detailsDescription": "With each completed cycle, a new task is automatically added to your history, and the app already suggests the next cycle (focus or break).",
+    "default": "<0>Our default:</0>",
+    "oddCycle": "<0>Odd cycles</0>: Work (focus).",
+    "evenCycle": "<0>Even cycles</0>: Short rest.",
+    "eightCycle": "<0>Cycle no. 8</0>: Special long rest, to reset the cycle.",
+    "visualization": "🍅 Cycles visualization",
+    "visualizationDescription": "Just below the timer, you'll see colored dots representing the cycles:",
+    "yellowIcon": "🟡 Yellow: Work cycle (focus).",
+    "greenIcon": "🟢 Green: Short rest.",
+    "blueIcon": "🔵 Blue: Long rest (show after 8 cycles).",
+    "iconDescription": "This way, you always know which part of the process you're in and what comes next. No need to write it down on paper or keep calculating in your head!",
+    "automatic": "📊 Automatic history",
+    "automaticDescription": "All your completed tasks and cycles are saved in the <1>history</1>, with status as completed or interrupted. This way, you can track your progress over time.",
+    "why": "Why Chronos Pomodoro?",
+    "whyOne": "✅ Organize your focus with clarity.",
+    "whyTwo": "✅ Work and rest in the right measure.",
+    "whyThree": "✅ Customize your own cycles and times.",
+    "whyFour": "✅ Track your history automatically.",
+    "readyCall": "<0>Ready to focus?</0> Let's go <2>back to the home page</2> and start your Pomodoros! 🍅🚀",
+    "quote": "<0>'Total focus, no rush, no pause, just go!'</0> 💪🧘‍♂️"
+  },
+  "history": {
+    "title": "History",
+    "delete": "Clear history",
+    "confirm": "Are you sure you want to clear your history?",
+    "task": "Task",
+    "duration": "Duration",
+    "date": "Date",
+    "status": "Status",
+    "type": "Type",
+    "focus": "Focus",
+    "shortRest": "Short rest",
+    "longRest": "Long rest",
+    "completed": "Completed",
+    "stopped": "Stopped",
+    "inProgress": "In progress",
+    "noTask": "No tasks yet"
+  },
+  "notFound": {
+    "title": "404 - Page not found 🚀",
+    "p1": "Oops! It looks like the page you're trying to access doesn't exist. Maybe it took a vacation, decided to explore the universe, or got lost somewhere between two black holes. 🌌",
+    "p2": "But don't worry, you're not lost in space (yet). You can safely go back to the <1>main page</1> or <3>to the history</3> — or you can stay here and pretend you found a secret page that only the coolest explorers can access. 🧭✨",
+    "p3": "If you think this page should exist (or if you want to chat about time travel and wormholes), just get in touch. Otherwise, use the menu to return to the real world.",
+    "p4": "In the meantime, here's a thought: 'If a page doesn't exist on the internet, did it ever really exist?' 🤔💭"
+  },
+  "settings": {
+    "title": "Settings",
+    "numberError": "Only numbers are allowed in these fields",
+    "shortFocusError": "Use values between 1 and 99 for short focus",
+    "shortRestError": "Use values between 1 and 30 for short rest",
+    "longRestError": "Use values between 1 and 60 for long rest",
+    "success": "Saved your new configuration",
+    "description": "Change the configurations for focus time, short and long rest",
+    "focus": "Focus",
+    "shortRest": "Short rest",
+    "longRest": "Long rest",
+    "save": "Save configurations"
+  }
+}

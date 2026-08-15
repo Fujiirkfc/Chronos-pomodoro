@@ -1,13 +1,14 @@
-import { SaveIcon } from "lucide-react";
-import { Container } from "../../components/Container";
-import { DefaultInput } from "../../components/DefaultInput";
-import { Heading } from "../../components/Heading";
-import { MainTemplate } from "../../templates/MainTemplate";
-import { DefaultButton } from "../../components/DefaultButton";
-import { useEffect, useRef } from "react";
-import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
-import { showMessage } from "../../adapter/showMessage";
-import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
+import { SaveIcon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Container } from '../../components/Container';
+import { DefaultInput } from '../../components/DefaultInput';
+import { Heading } from '../../components/Heading';
+import { MainTemplate } from '../../templates/MainTemplate';
+import { DefaultButton } from '../../components/DefaultButton';
+import { useEffect, useRef } from 'react';
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
+import { showMessage } from '../../adapter/showMessage';
+import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
 
 export function Settings() {
   const { state, dispatch } = useTaskContext();
@@ -15,8 +16,15 @@ export function Settings() {
   const shortBreakTimeInputRef = useRef<HTMLInputElement>(null);
   const longBreakTimeInputRef = useRef<HTMLInputElement>(null);
 
+  const { t } = useTranslation();
+  const numberError = t('settings.numberError');
+  const shortFocusError = t('settings.shortFocusError');
+  const shortRestError = t('settings.shortRestError');
+  const longRestError = t('settings.longRestError');
+  const successMessage = t('settings.success');
+
   useEffect(() => {
-    document.title = "Configuration - Chronos";
+    document.title = 'Configuration - Chronos';
   }, []);
 
   function handleSaveSettings(e: React.FormEvent<HTMLFormElement>) {
@@ -29,19 +37,19 @@ export function Settings() {
     const longBreakTime = Number(longBreakTimeInputRef.current?.value);
 
     if (isNaN(workTime) || isNaN(shortBreakTime) || isNaN(longBreakTime)) {
-      formErrors.push("Use only numbers for all fields");
+      formErrors.push(numberError);
     }
 
     if (workTime < 1 || workTime > 99) {
-      formErrors.push("Use values between 1 and 99 for short focus");
+      formErrors.push(shortFocusError);
     }
 
     if (shortBreakTime < 1 || shortBreakTime > 30) {
-      formErrors.push("Use values between 1 and 30 for short rest");
+      formErrors.push(shortRestError);
     }
 
     if (longBreakTime < 1 || longBreakTime > 60) {
-      formErrors.push("Use values between 1 and 60 for long rest");
+      formErrors.push(longRestError);
     }
 
     if (formErrors.length > 0) {
@@ -59,18 +67,16 @@ export function Settings() {
         longBreakTime,
       },
     });
-    showMessage.success("Saved your new configuration");
+    showMessage.success(successMessage);
   }
   return (
     <MainTemplate>
       <Container>
-        <Heading>Configurations</Heading>
+        <Heading>{t('settings.title')}</Heading>
       </Container>
 
       <Container>
-        <p style={{ textAlign: "center" }}>
-          Change the configurations for focus time, short and long rest
-        </p>
+        <p style={{ textAlign: 'center' }}>{t('settings.description')}</p>
       </Container>
 
       <Container>
@@ -78,7 +84,7 @@ export function Settings() {
           <div className="formRow">
             <DefaultInput
               id="workTime"
-              labelText="Focus"
+              labelText={t('settings.focus')}
               ref={workTimeInputRef}
               defaultValue={state.config.workTime}
               type="number"
@@ -87,7 +93,7 @@ export function Settings() {
           <div className="formRow">
             <DefaultInput
               id="shortBreakTime"
-              labelText="Short rest"
+              labelText={t('settings.shortRest')}
               ref={shortBreakTimeInputRef}
               defaultValue={state.config.shortBreakTime}
               type="number"
@@ -96,7 +102,7 @@ export function Settings() {
           <div className="formRow">
             <DefaultInput
               id="longBreakTime"
-              labelText="Long rest"
+              labelText={t('settings.longRest')}
               ref={longBreakTimeInputRef}
               defaultValue={state.config.longBreakTime}
               type="number"
@@ -105,7 +111,7 @@ export function Settings() {
           <div className="formRow">
             <DefaultButton
               icon={<SaveIcon />}
-              aria-label="save configurations"
+              aria-label={t('settings.save')}
             />
           </div>
         </form>

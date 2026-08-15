@@ -1,23 +1,37 @@
-import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
-import { getNextCycle } from "../../utils/getNextCycle";
-import { getNextCycleType } from "../../utils/getNextCycleType";
+import { useTranslation } from 'react-i18next';
+
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
+import { getNextCycle } from '../../utils/getNextCycle';
+import { getNextCycleType } from '../../utils/getNextCycleType';
 
 export function Tips() {
   const { state } = useTaskContext();
   const nextCycle = getNextCycle(state.currentCycle);
   const nextCycleType = getNextCycleType(nextCycle);
+  const { t } = useTranslation();
+
   const tipsForWhenActiveTask = {
-    workTime: <span>Focus for {state.config.workTime} minutes</span>,
-    shortBreakTime: <span>Rest for {state.config.shortBreakTime} minutes</span>,
-    longBreakTime: <span>Descanso longo</span>,
+    workTime: (
+      <span>{t('tips.workTimeFocus', { minutes: state.config.workTime })}</span>
+    ),
+    shortBreakTime: (
+      <span>
+        {t('tips.shortBreakFocus', { minutes: state.config.shortBreakTime })}
+      </span>
+    ),
+    longBreakTime: <span>{t('tips.longBreakFocus')}</span>,
   };
 
   const tipsForNoActiveTask = {
-    workTime: <span>Next cycle got {state.config.workTime} minutes</span>,
-    shortBreakTime: (
-      <span>Next rest {state.config.shortBreakTime} minutes</span>
+    workTime: (
+      <span>{t('tips.workTimeRest', { minutes: state.config.workTime })}</span>
     ),
-    longBreakTime: <span>Next rest will be higher</span>,
+    shortBreakTime: (
+      <span>
+        {t('tips.shortTimeRest', { minutes: state.config.shortBreakTime })}
+      </span>
+    ),
+    longBreakTime: <span>{t('tips.longTimeRest')}</span>,
   };
   return (
     <>

@@ -1,8 +1,8 @@
-import type { TaskModel } from "../models/TaskModel";
+import type { TaskModel } from '../models/TaskModel';
 
 export function getTaskStatus(task: TaskModel, activeTask: TaskModel | null) {
-  if (task.completeDate) return "Completed";
-  if (task.interruptDate) return "Stopped";
-  if (task.id === activeTask?.id) return "In progress";
-  return "Abandoned";
+  if (task.completeDate) return 'completed';
+  if (task.interruptDate) return 'stopped';
+  if (task.id === activeTask?.id) return 'inProgress';
+  return 'Abandoned';
 }
