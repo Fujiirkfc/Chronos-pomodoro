@@ -1,0 +1,111 @@
+{
+  "cycles": {
+    "title": "Ciclos",
+    "indicator": "indicador de ciclo"
+  },
+  "dialog": {
+    "confirm": "Confirmar acción y cerrar",
+    "cancel": "Cancelar acción y cerrar"
+  },
+  "about": {
+    "title": "Entiende cómo funciona la técnica Pomodoro",
+    "slogan": "Hecho con s2"
+  },
+  "logo": {
+    "title": "Chronos"
+  },
+  "mainform": {
+    "title": "Tarea",
+    "warning": "Escribe el nombre de la tarea para continuar",
+    "success": "¡Tarea iniciada!",
+    "placeholder": "escribe algo",
+    "start": "Iniciar nueva tarea",
+    "cancel": "Cancelar tarea"
+  },
+  "menu": {
+    "home": "Inicio",
+    "history": "Historial",
+    "configurations": "Configuración",
+    "language": "Idioma",
+    "theme": "Tema"
+  },
+  "tips": {
+    "workTimeFocus": "Concéntrate durante {{minutes}} minutos",
+    "shortBreakFocus": "Descansa durante {{minutes}} minutos",
+    "longBreakFocus": "Descanso largo",
+    "workTimeRest": "El próximo ciclo dura {{minutes}} minutos",
+    "shortTimeRest": "El próximo descanso dura {{minutes}} minutos",
+    "longTimeRest": "El próximo descanso será más largo"
+  },
+  "aboutPomodoro": {
+    "title": "La Técnica Pomodoro 🍅",
+    "description": "La Técnica Pomodoro es una metodología de productividad creada por <1>Francesco Cirillo</1>, que consiste en dividir el trabajo en bloques de tiempo (los famosos 'Pomodoros') intercalados con descansos. El objetivo es mantener el enfoque total durante un período corto y asegurar descansos para evitar la fatiga mental.",
+    "how": "¿Cómo funciona el Pomodoro tradicional?",
+    "howOne": "<0>1. Define una tarea</0> que quieras hacer.",
+    "howTwo": "<0>2. Trabaja en ella durante 25 minutos</0> sin interrupciones.",
+    "howThree": "<0>3. Toma un descanso corto de 5 minutos</0>.",
+    "howFour": "<0>4. Cada 4 ciclos, toma un descanso largo</0> (generalmente de 15 a 30 minutos).",
+    "but": "Pero <1>Chronos Pomodoro</1> le da su propio toque especial 🚀",
+    "butDescription": "Nuestra app sigue el concepto original, pero con algunas mejoras y personalizaciones para hacer el proceso aún más eficiente:",
+    "settings": "⚙️ Temporizador personalizable",
+    "settingsDescription": "¡Puedes configurar el tiempo de enfoque, el descanso corto y el descanso largo como quieras! Solo accede a la <1>página de configuración</1> y ajusta los minutos como prefieras.",
+    "details": "🔁 Ciclos organizados en secuencia",
+    "detailsDescription": "Con cada ciclo completado, se agrega automáticamente una nueva tarea a tu historial, y la app ya te sugiere el próximo ciclo (enfoque o descanso).",
+    "default": "<0>Nuestro valor:</0>",
+    "oddCycle": "<0>Ciclos impares</0>: Trabajo (enfoque).",
+    "evenCycle": "<0>Ciclos pares</0>: Descanso corto.",
+    "eightCycle": "<0>Ciclo n.º 8</0>: Descanso largo especial, para reiniciar el ciclo.",
+    "visualization": "🍅 Visualización de ciclos",
+    "visualizationDescription": "Justo debajo del temporizador, verás puntos de colores que representan los ciclos:",
+    "yellowIcon": "🟡 Amarillo: Ciclo de trabajo (enfoque).",
+    "greenIcon": "🟢 Verde: Descanso corto.",
+    "blueIcon": "🔵 Azul: Descanso largo (aparece después de 8 ciclos).",
+    "iconDescription": "Así, siempre sabrás en qué parte del proceso estás y qué viene a continuación. ¡Sin necesidad de anotarlo en papel ni de estar calculando mentalmente!",
+    "automatic": "📊 Historial automático",
+    "automaticDescription": "Todas tus tareas y ciclos completados se guardan en el <1>historial</1>, con estado de completado o interrumpido. Así puedes hacer seguimiento de tu progreso a lo largo del tiempo.",
+    "why": "¿Por qué Chronos Pomodoro?",
+    "whyOne": "✅ Organiza tu enfoque con claridad.",
+    "whyTwo": "✅ Trabaja y descansa en la medida justa.",
+    "whyThree": "✅ Personaliza tus propios ciclos y tiempos.",
+    "whyFour": "✅ Haz seguimiento de tu historial automáticamente.",
+    "readyCall": "<0>¿Listo para concentrarte?</0> Volvamos <2>a la página de inicio</2> y comienza tus Pomodoros! 🍅🚀",
+    "quote": "<0>'Enfoque total, sin prisa, sin pausa, solo avanza!'</0> 💪🧘‍♂️"
+  },
+  "history": {
+    "title": "Historial",
+    "delete": "Borrar historial",
+    "confirm": "¿Estás seguro de que deseas borrar tu historial?",
+    "task": "Tarea",
+    "duration": "Duración",
+    "date": "Fecha",
+    "status": "Estado",
+    "type": "Tipo",
+    "focus": "Enfoque",
+    "shortRest": "Descanso corto",
+    "longRest": "Descanso largo",
+    "completed": "Completada",
+    "stopped": "Detenida",
+    "inProgress": "En curso",
+    "noTask": "Aún no hay tareas"
+  },
+  "notFound": {
+    "title": "404 - Página no encontrada 🚀",
+    "p1": "¡Ups! Parece que la página que intentas acceder no existe. Tal vez se tomó unas vacaciones, decidió explorar el universo o se perdió en algún lugar entre dos agujeros negros. 🌌",
+    "p2": "Pero no te preocupes, todavía no estás perdido en el espacio. Puedes volver de forma segura a la <1>página principal</1> o <3>al historial</3> — o puedes quedarte aquí y fingir que encontraste una página secreta a la que solo los exploradores más geniales pueden acceder. 🧭✨",
+    "p3": "Si crees que esta página debería existir (o si quieres hablar sobre viajes en el tiempo y agujeros de gusano), simplemente ponte en contacto. De lo contrario, usa el menú para volver al mundo real.",
+    "p4": "Mientras tanto, aquí tienes una reflexión: '¿Si una página no existe en internet, alguna vez existió realmente?' 🤔💭"
+  },
+  "settings": {
+    "title": "Configuración",
+    "numberError": "Solo se permiten números en estos campos",
+    "shortFocusError": "Usa valores entre 1 y 99 para el enfoque corto",
+    "shortRestError": "Usa valores entre 1 y 30 para el descanso corto",
+    "longRestError": "Usa valores entre 1 y 60 para el descanso largo",
+    "success": "Se guardó tu nueva configuración",
+    "description": "Cambia la configuración del tiempo de enfoque, descanso corto y largo",
+    "focus": "Enfoque",
+    "shortRest": "Descanso corto",
+    "longRest": "Descanso largo",
+    "save": "Guardar configuración"
+  }
+}

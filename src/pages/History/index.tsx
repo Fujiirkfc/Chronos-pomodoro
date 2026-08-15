@@ -1,34 +1,39 @@
-import { TrashIcon } from "lucide-react";
-import { Container } from "../../components/Container";
-import { Heading } from "../../components/Heading";
-import { MainTemplate } from "../../templates/MainTemplate";
-import { DefaultButton } from "../../components/DefaultButton";
-import styles from "./style.module.css";
-import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
-import { formatDate } from "../../utils/formatDate";
-import { getTaskStatus } from "../../utils/getTaskStatus";
-import { sortTasks, type SortTasksOptions } from "../../utils/sortTasks";
-import { useEffect, useState } from "react";
-import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
-import { showMessage } from "../../adapter/showMessage";
+import { TrashIcon } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { Container } from '../../components/Container';
+import { Heading } from '../../components/Heading';
+import { MainTemplate } from '../../templates/MainTemplate';
+import { DefaultButton } from '../../components/DefaultButton';
+import styles from './style.module.css';
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
+import { formatDate } from '../../utils/formatDate';
+import { getTaskStatus } from '../../utils/getTaskStatus';
+import { sortTasks, type SortTasksOptions } from '../../utils/sortTasks';
+import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
+import { showMessage } from '../../adapter/showMessage';
 
 export function History() {
+  const { t } = useTranslation();
   const { state, dispatch } = useTaskContext();
   const [confirmClearHistory, setConfirmCleanHistory] = useState(false);
   const hasTasks = state.tasks.length > 0;
+
+  const confirmMessage = t('history.confirm');
 
   const [sortTasksOptions, setSortTaskOptions] = useState<SortTasksOptions>(
     () => {
       return {
         tasks: sortTasks({ tasks: state.tasks }),
-        field: "startDate",
-        direction: "desc",
+        field: 'startDate',
+        direction: 'desc',
       };
-    }
+    },
   );
 
   useEffect(() => {
-    document.title = "History - Chronos";
+    document.title = 'History - Chronos';
   }, []);
 
   useEffect(() => {
@@ -43,7 +48,7 @@ export function History() {
   }, [state.tasks]);
 
   useEffect(() => {
-    if (!confirmClearHistory) return console.log("RESET history");
+    if (!confirmClearHistory) return console.log('RESET history');
     setConfirmCleanHistory(false);
 
     dispatch({ type: TaskActionTypes.RESET_STATE });
@@ -55,8 +60,8 @@ export function History() {
     };
   }, []);
 
-  function handleSortTasks({ field }: Pick<SortTasksOptions, "field">) {
-    const newDirection = sortTasksOptions.direction === "desc" ? "asc" : "desc";
+  function handleSortTasks({ field }: Pick<SortTasksOptions, 'field'>) {
+    const newDirection = sortTasksOptions.direction === 'desc' ? 'asc' : 'desc';
     setSortTaskOptions({
       tasks: sortTasks({
         direction: newDirection,
@@ -67,27 +72,25 @@ export function History() {
       field,
     });
   }
+
   function handleResetHistory() {
     showMessage.dismiss();
-    showMessage.confirm(
-      "Do you really want to reset your history?",
-      (reason) => {
-        setConfirmCleanHistory(reason);
-      }
-    );
+    showMessage.confirm(confirmMessage, (reason) => {
+      setConfirmCleanHistory(reason);
+    });
   }
 
   return (
     <MainTemplate>
       <Container>
         <Heading>
-          <span>History</span>
+          <span>{t('history.title')}</span>
           <span className={styles.buttonContainer}>
             <DefaultButton
               icon={<TrashIcon />}
               color="red"
-              aria-label="Erase history"
-              title="Erase history"
+              aria-label={t('history.delete')}
+              title={t('history.delete')}
               onClick={handleResetHistory}
             />
           </span>
@@ -101,41 +104,49 @@ export function History() {
               <thead>
                 <tr>
                   <th
-                    onClick={() => handleSortTasks({ field: "name" })}
+                    onClick={() => handleSortTasks({ field: 'name' })}
                     className={styles.thSort}
                   >
-                    Tarefa
+                    {t('history.task')}
                   </th>
                   <th
-                    onClick={() => handleSortTasks({ field: "duration" })}
+                    onClick={() => handleSortTasks({ field: 'duration' })}
                     className={styles.thSort}
                   >
-                    Duracao
+                    {t('history.duration')}
                   </th>
                   <th
-                    onClick={() => handleSortTasks({ field: "startDate" })}
+                    onClick={() => handleSortTasks({ field: 'startDate' })}
                     className={styles.thSort}
                   >
-                    Data
+                    {t('history.date')}
                   </th>
-                  <th>Status</th>
-                  <th>Tipo</th>
+                  <th>{t('history.status')}</th>
+                  <th>{t('history.type')}</th>
                 </tr>
               </thead>
               <tbody>
                 {sortTasksOptions.tasks.map((task) => {
                   const taskTypeDictionary = {
-                    workTime: "Focus",
-                    shortBreakTime: "Short rest",
-                    longBreakTime: "Long rest",
+                    workTime: 'focus',
+                    shortBreakTime: 'shortRest',
+                    longBreakTime: 'longRest',
                   };
+
+                  const taskStatus = t(
+                    `history.${taskTypeDictionary[task.type]}`,
+                  );
+                  const taskType = t(
+                    `history.${getTaskStatus(task, state.activeTask)}`,
+                  );
+
                   return (
                     <tr key={task.id}>
                       <td>{task.name}</td>
                       <td>{task.duration}</td>
                       <td>{formatDate(task.startDate)}</td>
-                      <td>{getTaskStatus(task, state.activeTask)}</td>
-                      <td>{taskTypeDictionary[task.type]}</td>
+                      <td>{taskType}</td>
+                      <td>{taskStatus}</td>
                     </tr>
                   );
                 })}
@@ -143,7 +154,7 @@ export function History() {
             </table>
           </div>
         )}
-        {!hasTasks && <p>There is non created tasks yet</p>}
+        {!hasTasks && <p>{t('history.noTask')}</p>}
       </Container>
     </MainTemplate>
   );

@@ -1,23 +1,27 @@
-import { DefaultInput } from "../DefaultInput";
-import { Cycles } from "../Cycles";
-import { PlayCircleIcon, StopCircleIcon } from "lucide-react";
-import { DefaultButton } from "../DefaultButton";
-import { useRef } from "react";
-import type { TaskModel } from "../../models/TaskModel";
-import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
-import { getNextCycle } from "../../utils/getNextCycle";
-import { getNextCycleType } from "../../utils/getNextCycleType";
-import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
-import { Tips } from "../Tips";
-import { showMessage } from "../../adapter/showMessage";
+import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
+import { DefaultInput } from '../DefaultInput';
+import { Cycles } from '../Cycles';
+import { DefaultButton } from '../DefaultButton';
+import { useRef } from 'react';
+import type { TaskModel } from '../../models/TaskModel';
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
+import { getNextCycle } from '../../utils/getNextCycle';
+import { getNextCycleType } from '../../utils/getNextCycleType';
+import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
+import { Tips } from '../Tips';
+import { showMessage } from '../../adapter/showMessage';
 
 export function MainForm() {
   const { state, dispatch } = useTaskContext();
   const taskNameInput = useRef<HTMLInputElement>(null);
-  const lastTaskName = state.tasks[state.tasks.length - 1]?.name || "";
+  const lastTaskName = state.tasks[state.tasks.length - 1]?.name || '';
 
   const nextCycle = getNextCycle(state.currentCycle);
   const nextCycleType = getNextCycleType(nextCycle);
+
+  const { t } = useTranslation();
 
   // tips
 
@@ -29,8 +33,11 @@ export function MainForm() {
 
     const taskName = taskNameInput.current.value.trim();
 
+    const warningMessage = t('mainform.warning');
+    const successMessage = t('mainform.success');
+
     if (!taskName) {
-      showMessage.warning("Type the task name");
+      showMessage.warning(warningMessage);
       return;
     }
 
@@ -45,7 +52,7 @@ export function MainForm() {
     };
 
     dispatch({ type: TaskActionTypes.START_TASK, payload: newTask });
-    showMessage.success("Task started!");
+    showMessage.success(successMessage);
   }
 
   function handleInterruptTask() {
@@ -57,10 +64,10 @@ export function MainForm() {
     <form onSubmit={handleCreateNewtask} className="form" action="">
       <div className="formRow">
         <DefaultInput
-          labelText="task"
+          labelText={t('mainform.title')}
           id="meu_id"
           type="text"
-          placeholder="type something"
+          placeholder={t('mainform.placeholder')}
           ref={taskNameInput}
           disabled={!!state.activeTask}
           defaultValue={lastTaskName}
@@ -79,16 +86,16 @@ export function MainForm() {
       <div className="formRow">
         {!state.activeTask ? (
           <DefaultButton
-            aria-label="start new task"
-            title="start new task"
+            aria-label={t('mainform.start')}
+            title={t('mainform.start')}
             type="submit"
             icon={<PlayCircleIcon />}
             key="Submit button"
           />
         ) : (
           <DefaultButton
-            aria-label="cancel task"
-            title="cancel task"
+            aria-label={t('mainform.cancel')}
+            title={t('mainform.cancel')}
             type="button"
             color="red"
             icon={<StopCircleIcon />}

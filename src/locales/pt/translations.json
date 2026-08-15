@@ -1,0 +1,111 @@
+{
+  "cycles": {
+    "title": "Ciclos",
+    "indicator": "indicador de ciclo"
+  },
+  "dialog": {
+    "confirm": "Confirmar ação e fechar",
+    "cancel": "Cancelar ação e fechar"
+  },
+  "about": {
+    "title": "Entenda como funciona a técnica Pomodoro",
+    "slogan": "Feito com s2"
+  },
+  "logo": {
+    "title": "Chronos"
+  },
+  "mainform": {
+    "title": "Tarefa",
+    "warning": "Digite o nome da tarefa para continuar",
+    "success": "Tarefa iniciada!",
+    "placeholder": "digite algo",
+    "start": "Iniciar nova tarefa",
+    "cancel": "Cancelar tarefa"
+  },
+  "menu": {
+    "home": "Início",
+    "history": "Histórico",
+    "configurations": "Configurações",
+    "language": "Idioma",
+    "theme": "Tema"
+  },
+  "tips": {
+    "workTimeFocus": "Foque por {{minutes}} minutos",
+    "shortBreakFocus": "Descanse por {{minutes}} minutos",
+    "longBreakFocus": "Descanso longo",
+    "workTimeRest": "O próximo ciclo dura {{minutes}} minutos",
+    "shortTimeRest": "O próximo descanso dura {{minutes}} minutos",
+    "longTimeRest": "O próximo descanso será mais longo"
+  },
+  "aboutPomodoro": {
+    "title": "A Técnica Pomodoro 🍅",
+    "description": "A Técnica Pomodoro é uma metodologia de produtividade criada por <1>Francesco Cirillo</1>, que consiste em dividir o trabalho em blocos de tempo (os famosos 'Pomodoros') intercalados com pausas. O objetivo é manter o foco total por um curto período e garantir pausas para evitar o cansaço mental.",
+    "how": "Como funciona o Pomodoro tradicional?",
+    "howOne": "<0>1. Defina uma tarefa</0> que você deseja fazer.",
+    "howTwo": "<0>2. Trabalhe nela por 25 minutos</0> sem interrupções.",
+    "howThree": "<0>3. Faça uma pausa curta de 5 minutos</0>.",
+    "howFour": "<0>4. A cada 4 ciclos, faça uma pausa longa</0> (geralmente de 15 a 30 minutos).",
+    "but": "Mas o <1>Chronos Pomodoro</1> traz o seu próprio toque especial 🚀",
+    "butDescription": "Nosso app segue o conceito original, mas com algumas melhorias e personalizações para tornar o processo ainda mais eficiente:",
+    "settings": "⚙️ Cronômetro personalizável",
+    "settingsDescription": "Você pode configurar o tempo de foco, a pausa curta e a pausa longa do jeito que quiser! Basta acessar a <1>página de configurações</1> e ajustar os minutos como preferir.",
+    "details": "🔁 Ciclos organizados em sequência",
+    "detailsDescription": "A cada ciclo concluído, uma nova tarefa é adicionada automaticamente ao seu histórico, e o app já sugere o próximo ciclo (foco ou pausa).",
+    "default": "<0>Nosso padrão:</0>",
+    "oddCycle": "<0>Ciclos ímpares</0>: Trabalho (foco).",
+    "evenCycle": "<0>Ciclos pares</0>: Pausa curta.",
+    "eightCycle": "<0>Ciclo nº 8</0>: Pausa longa especial, para reiniciar o ciclo.",
+    "visualization": "🍅 Visualização dos ciclos",
+    "visualizationDescription": "Logo abaixo do cronômetro, você verá pontos coloridos representando os ciclos:",
+    "yellowIcon": "🟡 Amarelo: Ciclo de trabalho (foco).",
+    "greenIcon": "🟢 Verde: Pausa curta.",
+    "blueIcon": "🔵 Azul: Pausa longa (aparece após 8 ciclos).",
+    "iconDescription": "Assim, você sempre sabe em qual parte do processo está e o que vem a seguir. Sem necessidade de anotar no papel ou ficar calculando de cabeça!",
+    "automatic": "📊 Histórico automático",
+    "automaticDescription": "Todas as suas tarefas e ciclos concluídos são salvos no <1>histórico</1>, com status de concluído ou interrompido. Assim, você pode acompanhar seu progresso ao longo do tempo.",
+    "why": "Por que Chronos Pomodoro?",
+    "whyOne": "✅ Organize seu foco com clareza.",
+    "whyTwo": "✅ Trabalhe e descanse na medida certa.",
+    "whyThree": "✅ Personalize seus próprios ciclos e tempos.",
+    "whyFour": "✅ Acompanhe seu histórico automaticamente.",
+    "readyCall": "<0>Pronto para focar?</0> Vamos <2>voltar para a página inicial</2> e começar seus Pomodoros! 🍅🚀",
+    "quote": "<0>'Foco total, sem pressa, sem pausa, só ir!'</0> 💪🧘‍♂️"
+  },
+  "history": {
+    "title": "Histórico",
+    "delete": "Limpar histórico",
+    "confirm": "Tem certeza de que deseja limpar seu histórico?",
+    "task": "Tarefa",
+    "duration": "Duração",
+    "date": "Data",
+    "status": "Status",
+    "type": "Tipo",
+    "focus": "Foco",
+    "shortRest": "Pausa curta",
+    "longRest": "Pausa longa",
+    "completed": "Concluída",
+    "stopped": "Interrompida",
+    "inProgress": "Em andamento",
+    "noTask": "Nenhuma tarefa ainda"
+  },
+  "notFound": {
+    "title": "404 - Página não encontrada 🚀",
+    "p1": "Ops! Parece que a página que você está tentando acessar não existe. Talvez ela tenha tirado férias, decidido explorar o universo ou se perdido em algum lugar entre dois buracos negros. 🌌",
+    "p2": "Mas não se preocupe, você ainda não está perdido no espaço. Você pode voltar com segurança para a <1>página inicial</1> ou <3>para o histórico</3> — ou pode ficar aqui e fingir que encontrou uma página secreta que só os exploradores mais descolados conseguem acessar. 🧭✨",
+    "p3": "Se você acha que esta página deveria existir (ou se quiser conversar sobre viagens no tempo e buracos de minhoca), é só entrar em contato. Caso contrário, use o menu para voltar ao mundo real.",
+    "p4": "Enquanto isso, aqui vai uma reflexão: 'Se uma página não existe na internet, ela alguma vez existiu de verdade?' 🤔💭"
+  },
+  "settings": {
+    "title": "Configurações",
+    "numberError": "Apenas números são permitidos nesses campos",
+    "shortFocusError": "Use valores entre 1 e 99 para o foco curto",
+    "shortRestError": "Use valores entre 1 e 30 para a pausa curta",
+    "longRestError": "Use valores entre 1 e 60 para a pausa longa",
+    "success": "Sua nova configuração foi salva",
+    "description": "Altere as configurações de tempo de foco, pausa curta e longa",
+    "focus": "Foco",
+    "shortRest": "Pausa curta",
+    "longRest": "Pausa longa",
+    "save": "Salvar configurações"
+  }
+}
